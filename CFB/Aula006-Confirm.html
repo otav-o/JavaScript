@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // Diferença para o alert e prompt: exibe dois botôes, um OK (retorna true) e um cancelar (retorna false)
+        // bem parecido com o alert. Bom para if/else
+        // true: constante pré-definida que possui valor 1; false: valor 0
+        var nome = prompt("Digite seu nome", "nome aqui"); // quando cancela, passa null
+
+        var res = window.confirm(nome + " deseja continuar?"); 
+
+        alert(res);
+
+        document.write(res); // true
+        document.write(res + 1); // 2
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

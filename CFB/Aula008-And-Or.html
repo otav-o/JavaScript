@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        /* jogador vai ganhar quando: pontuação maior ou igual a trinta e menor ou igual a 40 ou maior ou igual a 70 e menor igual a 80 */
+
+
+        var pontos = window.prompt("Quantos pontos fez o jogador?");
+        if ((pontos >= 70 && pontos <= 80) || 
+        (pontos >= 30 
+        && 
+        pontos <= 40)) { // dá para fazer em várias linhas
+            document.write("O jogador ganhou! Total de " + pontos);
+        } else {
+            document.write("O jogador perdeu!");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

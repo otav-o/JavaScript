@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // não dá para mudar o valor inicial da constante ao longo do programa. Valor fixo ao longo do script
+        // lembrando que quando dá erro as linhas abaixo não são executadas (não vai imprimir, por exemplo). E dá para ver o problema no console do navegador, nas ferramentas do desenvolvedor
+
+        var nome = 'otávio';
+        nome = 'notebook';
+        document.write(nome);
+
+
+        document.write('<br>' + Math.PI + '<br>');
+        const nome2 = 'banana';
+        nome2 = 'alface'; // erro nessa linha (não executa as de baixo)
+        document.write(nome2);
+    </script>
+</body>
+</html>
