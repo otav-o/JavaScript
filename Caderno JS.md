@@ -124,6 +124,7 @@ document.write(res + 1); // 2
 - Já sei isso por outras linguagens de programação, inclusive em JS a sintaxe é idêntica a C# e Java
 - <, >, <=, >=, ==, !=
 - Única coisa legal: 1 significa true e 0 false
+- Para comandos de uma linha não são necessárias chaves
 
 ```javascript
 if (1) { 	// equivale a if(true)
@@ -165,4 +166,28 @@ if (teste) {
 ### Aula 010 - IF aninhado
 
 - Um IF dentro de outro
-- Ainda não vi a aula. Comparar com o código da aula anterior (que eu não copiei ainda)
+- Legal ver o código e comparar com o da aula 9 (mas não é essencial se vc já sabe)
+
+---
+
+### Aula 011 - Blocos de comandos { }
+
+- As chaves são obrigatórias se quiser delimitar **mais de uma instrução de um bloco**
+
+---
+
+### Aula 012 - Switch case
+
+```javascript
+switch(pos) {
+    case 1: case 2: case 3:
+    var msg = "Subiu ao pódio"; break;
+    default:
+    msg = "Não obteve medalha";
+}
+document.write(msg);
+```
+
+---
+
+### Aula 13 - Array/Vetor: Parte 1

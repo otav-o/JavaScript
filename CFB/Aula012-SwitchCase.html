@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // sempre usar um break, para que a execução saia do switch
+        
+        var pos;
+        pos = parseInt(window.prompt("Adicione uma posição"));
+
+        switch(pos) { // pode ser uma expressão também
+            case 1:
+                alert("Primeiro lugar!");
+                break;
+            case 2:
+                alert("Segundo lugar");
+                break;
+            case 3:
+                alert("Terceiro lugar");
+                break;
+            default:
+                alert("Honra ao mérito");
+        }
+
+        switch(pos) {
+            case 1: case 2: case 3:
+            var msg = "Subiu ao pódio"; break;
+            default:
+                msg = "Não obteve medalha";
+        }
+        document.write(msg);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
