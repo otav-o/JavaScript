@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // indexof: pesquisa se um elemento pertence ao array. Retorna a posição ou, se não encontrar, -1
+        // sort: ordenação de números
+        // reverse: inverte a ordem dos elemtos
+        // concat: junta os elementos de dois arrays em um terceiro
+
+        var empresas = ["Samsung", "Apple", "LG", "Asus", "Lenovo", "Nokia", 25, 12, true];
+
+        var num = [5, 8, 4, 9, 7, 6, 4, 0, 2, 1];
+
+        var numeros = num.join(); // todos os elementos em uma variável, separados por vírgula
+
+        function imprimir(array) {
+            for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + '<br>');
+            }
+        }
+
+        imprimir(num);
+        num.sort();
+        imprimir(num);
+        num.reverse(num); // se não ordenar antes, inverte a ordem de inserção!
+
+        document.write(numeros);
+        
+        document.write(empresas.indexOf("Motorola"));
+
+        var pos = empresas.indexOf(true);
+
+        if (pos < 0) document.write("Item não está na mochila <br>");
+        else document.write("Item está na mochila<br>Posição " + pos);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

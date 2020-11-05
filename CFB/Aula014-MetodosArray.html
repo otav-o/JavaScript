@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // push: insere no final do array
+        // unshift: insere elementos no início do array (posição 0)
+        // pop: remove o último elemento
+        // shift: remove o primeiro
+        // splice: remove de qualquer posição
+
+
+        var mochila = [];
+
+        mochila.push("Faca", "Corda", "Pederneira", "Chave", "Lanterna");
+
+        mochila.unshift("Pedra"); // adiciona pedra no índice 0
+
+        mochila.pop(); // some com a lanterna (último elemento)
+
+        mochila.shift() // remove no início (tira pedra e volta a imprimir faca)
+
+        mochila.splice(2, 1); // a partir do índice 2, remover 1 elemento.
+        // mochila.splice(0, 2);   // remove o 0 e o 1 
+        // remover intercalado: precisa dar dois splices. Mas cuidado! Os índices serão reajustados, então reduza o índice do segundo splice na mesma quantidade de itens removidos.
+
+        for (var i = 0; i < mochila.length; i++) {
+            document.write(mochila[i] + "<br>");
+        }
+
+        // chamar uma posição que não existe retorna undefined
+
+        document.write(mochila[10]);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

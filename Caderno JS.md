@@ -190,4 +190,53 @@ document.write(msg);
 
 ---
 
-### Aula 13 - Array/Vetor: Parte 1
+### Aula 013 - Array/Vetor
+
+- Método push(): insere na próxima posição do array
+- Vetor: array unidimensional - controlado por apenas um índice
+- Duas formas de criar:
+
+```javascript
+var cor = new Array();
+  var carros = [];
+```
+
+- Adicionar elementos:
+
+```javascript
+cor.push("Preto");
+   cor.push("Branco", "Vermelho", "Verde", "Azul");
+
+cor[0] = "Amarelo";
+cor[1] = "Azul";
+cor[2] = "Rosa";
+```
+
+- Criar adicionando itens
+
+```javascript
+var pares = [0, 2, 4, '6', 8, 10]; // não é homogêneo
+```
+
+- Item de um array como índice de outro array
+
+```js
+document.write(itens[mochila[1]]);
+```
+
+---
+
+### Aula 014 - Métodos para Arrays (Parte 1)
+
+| Sintaxe                            | O que faz                    |
+| ---------------------------------- | ---------------------------- |
+| `array,push(elemento)`             | Adiciona item(s) no final    |
+| `array.unshift(elemento)`          | Adiciona na primeira posição |
+| `array.pop()`                      | Remove no final              |
+| `array.shift()`                    | Remove no início             |
+| `array.splice(indice, quantidade)` | Remove em qualquer posição   |
+
+---
+
+### Aula 015 - Métodos para Arrays (Parte 2)
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // push: insere na última posição
+        var cor = new Array();
+        // var cor = [];
+
+        cor.push("Preto");
+        cor.push("Branco", "Vermelho", "Verde", "Azul");
+
+        cor[0] = "Amarelo";
+        cor[1] = "Azul";
+        cor[2] = "Rosa";
+
+        document.write(cor[2]);
+
+
+        var itens = ["Faca", "Pederneira", "Corda", "Lanterna", "Luvas", "Chave", "Arame"];
+
+        var mochila = [];
+
+        mochila.push(itens[2]);
+
+        document.write(mochila[0]);
+
+
+        mochila.push(2); // array em JS não é homogêneo?
+
+        document.write(itens[mochila[1]]); // Interessante criar um array para armazenar os itens, tipo um índice
+    </script>
+</body>
+</html>
