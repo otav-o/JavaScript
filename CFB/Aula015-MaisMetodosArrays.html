@@ -8,31 +8,61 @@
         // reverse: inverte a ordem dos elemtos
         // concat: junta os elementos de dois arrays em um terceiro
 
+        // modificam o array permanentemente
+
         var empresas = ["Samsung", "Apple", "LG", "Asus", "Lenovo", "Nokia", 25, 12, true];
 
-        var num = [5, 8, 4, 9, 7, 6, 4, 0, 2, 1];
+        var num = [5, 8, 4, 9, 7, 6, 3, 0, 2, 1];
 
-        var numeros = num.join(); // todos os elementos em uma variável, separados por vírgula
-
-        function imprimir(array) {
+        function imprimir(array, extra = '') {
             for (var i = 0; i < array.length; i++) {
-            document.write(array[i] + '<br>');
+                document.write(array[i] + extra);
             }
         }
 
-        imprimir(num);
-        num.sort();
-        imprimir(num);
-        num.reverse(num); // se não ordenar antes, inverte a ordem de inserção!
+        imprimir(num + "<br>");
 
-        document.write(numeros);
+
+        // array.sort()
+        num.sort();
+        imprimir(num + "<br>");
+
+        // array.reverse()
+        num.reverse(); // se não ordenar antes, não fica decrescente!
+        imprimir(num + "<br>");
+
+        // array.join(separador=virgula)
+        var numeros = num.join('-'); // retorna todos os elementos em uma string, separados por vírgula (padrão)
+        document.write(numeros + "<br>"); 
         
-        document.write(empresas.indexOf("Motorola"));
+        // array.indexOf(elemento)
+        document.write(empresas.indexOf("Motorola") + '<br>'); // -1 ou 1
 
         var pos = empresas.indexOf(true);
 
         if (pos < 0) document.write("Item não está na mochila <br>");
-        else document.write("Item está na mochila<br>Posição " + pos);
+        else document.write("Item está na mochila<br>Posição " + pos + '<br>');
+
+        // array3 = array.concat(array2);
+        var mochila = [];
+        mochila.push("Arame");
+        mochila.push("Luvas");
+        mochila.push("Joelheira");
+        mochila.push("Meias");
+        mochila.push("Moeda");
+        mochila.push("Canivete");
+
+            // observe a ordem de impressão: o primeiro array é o objeto, já o segundo é o parâmetro
+        var mochila2 = empresas.concat(mochila); // arrayJuncao = primeiroArray.concat(segundoArray)
+        var mochila3 = mochila.concat(empresas);
+        var empresas = empresas.concat(mochila3);
+
+        document.write('<br>');
+        imprimir(mochila2, '<br>');
+        document.write('<br>');
+        imprimir(mochila3, '<br>');
+        document.write('<br>');
+        imprimir(empresas, '<br>');
 
     </script>
 </head>

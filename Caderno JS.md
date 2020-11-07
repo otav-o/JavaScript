@@ -2,7 +2,7 @@ Início: 03/11/2020 - terça
 
 Link da playlist: <a href='https://www.youtube.com/watch?v=lcKo-ycLDNw&list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC&index=1'>aqui</a>
 
-### Aula 001 - document.write
+### Aula 001 - document.write()
 
 - A tag `<script></script>` pode estar no body
 - Pode haver vários blocos script na página (mas fica desorganizado)
@@ -226,7 +226,7 @@ document.write(itens[mochila[1]]);
 
 ---
 
-### Aula 014 - Métodos para Arrays (Parte 1)
+### Aula 014 - Métodos para Arrays (Parte 2)
 
 | Sintaxe                            | O que faz                    |
 | ---------------------------------- | ---------------------------- |
@@ -238,5 +238,114 @@ document.write(itens[mochila[1]]);
 
 ---
 
-### Aula 015 - Métodos para Arrays (Parte 2)
+### Aula 015 - Métodos para Arrays (Parte 3)
+
+| Sintaxe                           | O que faz                                                    |
+| --------------------------------- | ------------------------------------------------------------ |
+| `array.sort()`                    | Ordena os elementos numéricos                                |
+| `array.reverse()`                 | Inverte a ordem atual                                        |
+| `array.join(separador = virgula)` | Retorna todos os elementos em uma string, separados por vírgula |
+| `array.indexOf(elemento)`         | Busca um elemento. Retorna a posição ou -1                   |
+| `array.concat(array2)`            | Junta os elementos de 2 arrays em um terceiro. O objeto vem antes do parâmetro |
+
+```javascript
+var empresasMochila = empresas.concat(mochila);
+var mochilaEmpresas = mochila.concat(empresas);
+
+var numeros = num.join('-'); // numeros é uma string
+
+num.sort();
+num.reverse(); // ambos alteram o array definitivamente
+
+var pos = empresas.indexOf("Canivete"); // -1 ou i
+if (pos < 0) document.write("Item não está na mochila <br>");
+```
+
+---
+
+> Quando se escreve só o nome do vetor sem o índice o javascript já exibe automaticamente todos os elementos do vetor separados por vírgula (não precisa de um loop como em C#). Utilizando a função join() daria para fazer eles serem exibidos um em cada linha, fazendo mochila.join("`<br/>`");
+>
+> Obs.: rumores de que o sort não funciona bem com números maiores que 9
+
+---
+
+### Aula 016 - Trabalhando com Matrizes
+
+- "Um array dentro de uma posição do array"
+- Arrays multidimensionais
+
+```js
+var mochila = new Array();
+        var item1 = ["Corda", 2],
+            item2 = ["Faca", 1],
+            item3 = ["Cura", 5];
+
+mochila.push(item1, item2, item3);
+document.write(mochila[0][1] + '<br>'); // 2
+document.write(mochila[2][0]) // Cura
+```
+
+---
+
+### Aula 017 - Incremento e decremento de variáveis
+
+- Pós-incremento/decremento
+
+  - Utiliza o valor antigo na linha e só altera no final dela
+
+ ```js
+document.write(num++);
+ ```
+
+- Pré-incremento/decremento
+
+  - Altera o valor antes da execução
+
+```js
+document.write(--num);
+```
+
+- Inverter sinal temporariamente
+
+  - Colocar um `-` antes. Não altera o valor como os outros
+
+```
+document.write(-num);
+```
+
+- Inverter o sinal definitivamente
+```js
+num *= -1	// num = num * -1
+```
+
+- Aplicações genéricas
+
+```javascript
+var oi = 10
+oi += 5 // oi = oi + 5
+oi--; // oi = oi - 1
+oi -= 5
+```
+
+> Não testei: 2+num é pré-incremento? Como funcionaria no loop for?
+
+---
+
+### Aula 018 - Loop For
+
+- Executar o bloco de comandos um número determinado de vezes
+- Inicializar o contador dentro do for restringe seu escopo para dentro das chaves (não dá para usá-lo no restante do programa)
+
+```js
+for (var i = 0; i < 5; i++){
+            num.push(prompt("Digite um texto", ""));
+        }
+        
+        
+for (var l = 0; l < 4; l++) {
+            for (var c = 0; c < 2; c++) {
+                document.write(mochila[l][c] + "<br>");
+            }
+        }
+```
 

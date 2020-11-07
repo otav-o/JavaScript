@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var cont = 0;
+        for (cont; cont < 10; cont++) {
+            document.write(cont + '<br>');
+        }
+
+        var num = [];
+        /*for (var i = 0; i < 5; i++){
+            num.push(prompt("Digite um texto", ""));
+        }
+        */
+        for (var i = 4; i >= 0; i--) { // imprimir array
+            document.write(num[i] + '<br>');
+        }
+
+        var mochila = [["corda", 1], ["Cura", 10], ["Lanterna", 1], ["Pilhas", 20]];
+
+        for (var l = 0; l < 4; l++) {
+            for (var c = 0; c < 2; c++) {
+                document.write(mochila[l][c] + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
