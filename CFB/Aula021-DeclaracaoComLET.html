@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // a variável declarada com o let faz parte do escopo onde foi declarada (ex.: bloco if). É possível ter let dentro de let
+        // var é variável global, existe em todo o programa, inclusive nas funções
+
+        var num = 10;
+        document.write(num + "<br>");   // 10
+
+        if (num == 10) { 
+            let num = 5; 
+            document.write(num + "<br>"); // 5
+        }
+        document.write(num + "<br>"); // 10
+
+// ---
+        document.write('<hr>');
+
+
+        let num2 = 10;
+        document.write(num + '<br>'); // 10
+
+        if (num == 10) {
+            let num2 = 5;
+            document.write(num2 + '<br>'); // 5
+        }
+
+        document.write(num2 + '<br>'); // 10
+
+// ---
+        document.write('<hr>');
+
+
+        let num3 = 10;  // o mesmo se fosse var
+        document.write(num3 + '<br>'); // 10
+
+        if (num == 10) {
+            num3 = 5;
+            document.write(num3 + '<br>'); // 5
+        }
+
+        document.write(num3 + '<br>'); // 5
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

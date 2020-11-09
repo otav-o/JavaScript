@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // try: inserir a rotina que queremos tratar um provável erro. Exceção é gerada no try e é passada para o catch por parâmetro(intercepta o problema e trata);
+        // finally: é executado independente de erro ou não. Não é um bloco obrigatório
+        // obs.: existem casos em que precisamos gerar uma exceção
+
+        var num, num2;
+
+        try {
+            document.writi('oi');
+        } catch (e) {
+            document.write("ERRO");
+            // console.log("Mensagem de erro: " + e.message);
+            document.write("<br>Mensagem de erro: " + e.message + "<br>");
+        }
+
+        try {
+            num = 10/0; // erro é tratado internamente
+            document.write("10/0 = " + num + '<br>'); // infinity
+        } catch (laranja) {
+            document.write("Nem sou executado");
+        }
+
+    // Parte 2: gerar erro manualmente. Regras que vc inventar.
+
+        try {
+
+            num = prompt("Digite um valor");
+
+            if (num > 10)
+                throw new Error("Valor inválido. O número deve ser menor ou igual a 10."); // força/cria uma exceção que não existe.
+
+            document.write("Valor: " + num);
+
+        } catch (er) {
+
+            document.write("Exceção gerada <br>");
+            document.write("ERRO: " + er.message); // e.message é o texto passado por parâmetro no Error
+
+        } finally {
+            document.write("<br>Fim<br>")
+        }
+        
+
+        // jeito mais avançado (e útil):
+
+        try {
+            num2 = prompt("Digite um número (limite 10)");
+            if (num2 > 10) throw new Error("NÃO! Isso tem mais que 10!");
+        } catch (e) {
+            console.log(e.message); // disponível apenas no console
+            num2 = 10;
+        } finally {
+            document.write('Valor2: ' + num2);
+        }
+
+    </script>
+    
+</body>
+</html>

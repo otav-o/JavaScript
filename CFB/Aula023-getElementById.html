@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 23</title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <p id='texto'>CFB Cursos</p>
+
+    <div id='caixa'></div>
+
+    <script>
+        // aponta elementos do corpo do html que tenham um id definido, passando o id por parâmetro.
+        //script deve estar depois, pois o texto ainda não foi renderizado (não existe)
+
+        document.getElementById('texto').style.color = 'blue';
+        document.getElementById('texto').style.fontSize = '50px';
+
+        var txt = document.getElementById('texto');
+        txt.style.color = '#f00';
+        txt.style.fontSize = '100px';
+
+        var cx = document.getElementById('caixa');
+        cx.style.border = '1px solid #000';
+        cx.style.width = '300px';
+        cx.style.height = '300px';
+        cx.style.backgroundColor = '#aaa';
+        // cx.style.display = 'none';
+
+
+        // ver a tabela de 'parâmetros' na apostila do curso
+
+        // obs.: mais informações sobre document.getElementById na p´roxima aula
+    </script>
+</body>
+</html>

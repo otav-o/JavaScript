@@ -384,3 +384,110 @@ while (num--) { // 9 a 0 (não sei pq para no zero!)
 
 ### Aula 020 - Loop Do While
 
+- Garantia de que o bloco será executado pelo menos uma vez, pois o teste está no final.
+
+```javascript
+var num = 10
+do {
+    document.write(num);
+    num++;
+} while(num < 10);
+```
+
+---
+
+### Aula 021 - Declaração de variável com let
+
+- Até agora: const para constantes e var para variáveis
+- A variável declarada com let faz parte do escopo onde foi declarada
+
+```javascript
+var num = 10;
+let num2 = 11;
+
+if (num == 10) {
+	let num = 5;
+	let num2 = 12;
+	document.write(num + ' ' + num2) // 5 12
+}
+
+document.write(num + ' ' + num2) // 10 11
+```
+
+---
+
+### Aula 022 - Tratamento de erros / try catch finally
+
+- Obs.: `console.log(mensagem)`;
+  - Imprime no console (não é visível)
+- A vantagem de tratar exceções (erros) é impedir a interrupção do programa caso algo dê errado
+- **try**: onde se procura o erro para interceptar e tratar no catch. Tem sua execução interrompida ao identificar o problema.
+- **catch**: onde se trata o erro. Ex.: modificar o valor inválido para um padrão
+- **finally**: é sempre executado, independentemente de erro ou não.
+- `throw new Error(mensagem)`: se executado, dispara uma exceção. Serve para criar um desvio que não existe naturalmente em JS
+
+- **Mensagens padrão**
+
+```javascript
+try {
+	document.writi('oi');
+} catch (e) { 	// evita a interrupção do programa
+	document.write("ERRO");
+	document.write("<br>Mensagem de erro: " + e.message + "<br>");
+}
+
+try {
+    num = 10/0; // erro é tratado internamente
+    document.write("10/0 = " + num + '<br>'); // infinity
+} catch (laranja) {
+	document.write("Nem sou executado");
+}
+```
+
+- **Criando sua própria exceção**
+
+```javascript
+try {
+    num2 = prompt("Digite um número");
+    if (num2 > 10) throw new Error("NÃO! Isso tem mais que 10!");
+} catch (e) {
+    console.log(e.message); // texto que foi passado por parâmetro no Error
+    num2 = 10;
+} finally {
+    document.write('Valor2: ' + num2);
+}
+```
+
+---
+
+### Aula 023 - Manipular elementos HTML com `JAVASCRIPT`
+
+- **`document.getElementById('')`: **aponta elementos do corpo do html que tenham um id definido, passando o id por parâmetro.
+  - Não esquecer da classe document
+  - Por exemplo, pode-se modificar as propriedades CSS
+
+```javascript
+var cx = document.getElementById('caixa');
+cx.style.border = '1px solid #000';
+cx.style.width = '300px';
+cx.style.height = '300px';
+cx.style.backgroundColor = '#aaa';
+        
+document.getElementById('texto').style.color = 'blue';
+document.getElementById('texto').style.fontSize = '50px';
+```
+
+- O nome das propriedades no CSS e JS mudam um pouco, principalmente se for nome composto por duas palavras (ex.: font-size e fontSize; background-color e backgroundColor)
+- Ao inspecionar a página, dá para ver o código inserido nas tags html
+
+Enfim:
+
+```javascript
+document.getElementById('id').classe1.classe2 = 'valor';
+```
+
+---
+
+### Aula 24 - innerHTML e mais sobre getElementById
+
+- 
