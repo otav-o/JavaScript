@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var num;
+
+        for (num = 0; num < 10; num++) {
+            document.write(num);
+        }
+
+        document.write('<hr>');
+
+        num = 0;
+        while(num < 10) {
+            document.write(num + '<br>');
+            num++;
+        }
+
+        document.write('<hr>');
+
+        num = 10;
+
+        while (num--) { // versão reduzida (controle da execução dentro do parâmetro). Acredito que o que explica isso é que -1 significa false (então para no zero); há o teste e depois diminui 1
+            document.write(num + '<br>') // 9 até 0
+        }
+        
+        document.write('<hr>');
+
+        num = -10;
+        var cont = 0;
+        while (num++) { // vai do -9 até o 0 (não parou no -1, então não é verdade o que falei acima) // para de falar sozinho mano
+            document.write(cont + ' ' + num + ' ');
+            cont++ // 0 até 9
+        }
+
+        document.write('<hr>');
+
+        var cont = 0;
+        num = 10;
+        while (num--) {
+            document.write(cont); // 0 a 9
+            cont++;
+        }
+
+
+    </script>
+</body>
+</html>

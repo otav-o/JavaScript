@@ -349,3 +349,38 @@ for (var l = 0; l < 4; l++) {
         }
 ```
 
+---
+
+### Aula 019 - Loop While
+
+- Quando não se sabe a quantidade de vezes que o código será executado
+
+```javascript
+for (p1; p2; p3) {
+}
+
+p1;
+while (p2) {
+	p3;
+}
+```
+
+```javascript
+num = 0;
+while(num < 10) {
+	document.write(num + '<br>');
+	num++;
+}
+
+var cont = 0;
+num = 10;
+while (num--) { // 9 a 0 (não sei pq para no zero!)
+    document.write(cont); // 0 a 9
+    cont++;
+}
+```
+
+---
+
+### Aula 020 - Loop Do While
+
