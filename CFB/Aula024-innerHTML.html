@@ -5,9 +5,28 @@
 </head>
 <body>
     <script>
-    // innerHTML: obter e/ou modificar o conteúdo de uma tag. Ex.: mudar o texto de um parágrafo
-    document.write("<p id='texto'>CFB Cursos</p>");
-    document.write("<input type='text' id='cxtexto' value='CFB Cursos'>");
+        // innerHTML: obter e/ou modificar o conteúdo que está entre as tags (não são parâmetros dela). Ex.: mudar o texto de um parágrafo
+        document.write("<p id='texto'>Curso de JavaScript</p>"); // o conteúdo será alterado pelo innerHTML 
+
+        document.write("<input type='text' id='cxtexto' value='CFB Cursos'>");
+    </script>
+
+    <div id='dv'>Texto da DIV</div>
+
+    <script>
+
+        var a = document.getElementById("cxtexto").value = 'Bom dia'; // mas não dá para obter o value de algumas tags, como o parágrafo
+        alert(a); // exibe 'bom dia', ou seja, não atribui a 'a' antes do value 
+        var b = document.getElementById('texto').innerHTML; // innerHTML substitui a palavra value
+        // alert(b);
+        document.getElementById('texto').innerHTML = 'Esse curso é legal';
+
+        document.getElementById('dv').innerHTML = "Segundo texto da DIV";
+        
+
+    // o que eu descobri hoje: dá para ter mais de um bloco script; o innerHTML é a alternativa para a propriedade value e é usado junto com o getElementById(id) para pegar (ou modificar) o conteúdo delimitado pela tag
+
+    // document.getElementById("seulink").getAttributeNode("href").textContent
     </script>
 </body>
 </html>

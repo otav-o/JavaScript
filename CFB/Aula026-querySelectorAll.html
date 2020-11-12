@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .titulo {
+            color: #f00;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+        div {
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+        }
+        /* * {
+            display: block;
+        } */
+        .quadro {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 class='titulo'>querySelectorAll</h1>
+    <p>O querySelectorAll() é um método que retorna os elementos do documento que correspondem a uma classe de CSS ou a uma tag específica</p>
+    <h2 class='titulo'>Curso de JavaScript</h2>
+    <p>www.youtube.com/cfbcursos</p>
+    <p class='titulo'>cfbcursos.com.br</p>
+    <div>
+        <h3>Javascript aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <div class='quadro'>
+        <h3>Javascript aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <a href='https://www.youtube.com/cfbcursos' target='_blank'>CANAL</a>
+    <a href='https://cfbcursos.com.br'>SITE</a>
+    <hr>
+    <script>
+        // também retorna elementos indicados pelo por parâmetros do métodos. Faz o mesmo que o getElementsByTagName e mais coisas, como retornar uma tag que use um classe específica ou está dentro de outra tag. 
+        // pode, inclusive, selecionar várias tags diferentes com uma chamada do método
+
+        
+        // mesmas coisas que o getElementsByTagName
+        var ps = document.querySelectorAll('p'); // h2, div, a tag que quiser.
+
+        document.write(ps[0].innerHTML + '<br>');
+        ps[0].style.color = '#00f'; // mudou o estilo
+        ps[0].innerHTML = 'Novo texto';
+
+
+        // tags cuja classe é título
+        var elementos = document.querySelectorAll('.titulo');
+        for (var i = 0; i < elementos.length; i++) {
+            document.write(elementos[i].innerHTML + '<br>');
+        }
+
+        // tags p cuja classe é título
+        var elementos2 = document.querySelectorAll('p.titulo');
+        document.write(elementos2[0].innerHTML + '<br>');
+
+
+        // todos os elementos dentro da div
+        var elementos3 = document.querySelectorAll('div > *'); 
+        for (var i = 0; i < elementos3.length; i++) {
+            document.write(elementos3[i].innerHTML + '<br>');
+            elementos3[i].style.color = 'pink';
+        }
+
+        // elementos p dentro da div
+        var elementos4 = document.querySelectorAll('div > p'); 
+        for (var i = 0; i < elementos4.length; i++) {
+            document.write(elementos4[i].innerHTML + '<br>');
+            elementos4[i].style.color = 'green';
+        }
+
+        // todos os elementos que estão dentro de uma div e têm a classe quadro
+
+        var elementos5 = document.querySelectorAll('div.quadro > *');
+        for (var i = 0; i < elementos5.length; i++) {
+            elementos5[i].style.color = 'red';
+        }
+
+        // todos os elementos que estão dentro de uma div e têm a classe quadro e a tag <p>
+        
+        var elementos6 = document.querySelectorAll('div.quadro > p');
+        for (var i = 0; i < elementos6.length; i++) {
+            elementos6[i].style.color = 'purple';
+        }
+
+        // vários elementos: separar por vírgula
+
+        var elementos7 = document.querySelectorAll('h1, h3, p');
+        for (var i = 0; i < elementos7.length; i++) {
+            elementos7[i].style.color = 'navy';
+        }
+
+        // ver na apostila várias outras formas (p.53)
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    
+</head>
+<body>
+    <p id='oi'>CFB Cursos</p>
+    <h2>titulo</h2>
+    <p>Curso de Javascript</p>
+    <p>Aula 25</p>
+    <h3>titulo tag 8</h3>
+    <p>www.youtube.com/cfbcursos</p>
+    <p>cfbcursos.com.br</p>
+
+    <hr>
+
+    <script>
+        // retorna, em forma de vetor, todos os elementos da tag especificada
+        // Ex.: tem 10 elementos <p> na página, retorna todos. Dá para controlar manipulando elementos do vetor
+        
+            var vet = document.getElementsByTagName('p');
+            // document.write(vet);
+
+            for (var i = 0; i < vet.length; i++) {
+                document.write(vet[i].innerHTML + '<br>');
+            }
+                    // não esquecer do .innerHTML, não basta apontar o objeto, precisa da propriedade
+
+
+
+
+            document.write('<br>' + document.getElementById('oi').innerHTML); // CFB Cursos
+
+
+
+
+            var elem2 = document.getElementsByTagName('p')[2]; // Aula 25
+                    // neste caso não retorna todos
+                document.write('<br>' + elem2.innerHTML); 
+
+            document.write('<br>' + document.getElementsByTagName('p')[3].innerHTML); // link youtube
+
+            
+
+
+            document.getElementsByTagName('p')[0].innerHTML = 'Testando'; // também funciona atribuição
+
+
+            document.getElementsByTagName('p')[2].style.color = '#f00';
+
+            var tagsP = document.getElementsByTagName('p');
+            for (var i = 0; i < tagsP.length; i++) {
+                tagsP[i].style.color = '#f00';
+            }
+
+
+
+
+
+            // pegar todas as tags da página - não funcionou! Tentar de novo
+
+            var tags = document.getElementsByTagName("*");
+            tags[8].style.color = '#0f0';
+            tags[8].innerHTML = 'NOVO TÍTULO';
+
+
+    </script>
+</body>
+</html>

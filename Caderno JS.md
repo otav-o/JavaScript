@@ -2,6 +2,10 @@ Início: 03/11/2020 - terça
 
 Link da playlist: <a href='https://www.youtube.com/watch?v=lcKo-ycLDNw&list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC&index=1'>aqui</a>
 
+[TOC]
+
+
+
 ### Aula 001 - document.write()
 
 - A tag `<script></script>` pode estar no body
@@ -488,6 +492,87 @@ document.getElementById('id').classe1.classe2 = 'valor';
 
 ---
 
-### Aula 24 - innerHTML e mais sobre getElementById
+### Aula 024 - innerHTML e mais sobre getElementById
 
-- 
+- innerHTML é uma propriedade de getElementById(id) que permite capturar ou modificar o conteúdo delimitado pela tag.
+
+```javascript
+var b = document.getElementById('texto').innerHTML; // captura
+
+document.getElementById('dv').innerHTML = "Segundo texto da DIV"; // modificação
+
+var a = document.getElementById('id').innerHTML = "oi"; // atrubui e depois captura
+```
+
+---
+
+- Obs.: para algumas tags que aceitam value
+
+```javascript
+document.getElementById("cxtexto").value = 'Bom dia'
+```
+
+---
+
+### Aula 025 - getElementsByTagName
+
+- Também da classe document
+- Retorna, em forma de vetor, todos os elementos da tag especificada (para tags que aparecem várias vezes no código)
+- **Muito parecido com o `document.getElementById(id)`**, dá para acessar e modificar suas propriedades, como o conteúdo (`.innerHTML`), o estilo (`.style`) e etc.
+  - O índice é a posição da tag, então comece a contar do zero
+
+```javascript
+document.write(document.getElementsByTagName('p')[3].innerHTML); // lê
+
+document.getElementsByTagName('p')[0].style.color = '#f00'; // atribui
+```
+
+- É mais fácil usar variáveis
+
+```js
+var vet = document.getElementsByTagName('p');
+for (var i = 0; i < vet.length; i++) {
+	document.write(vet[i].innerHTML + '<br>');
+}
+```
+
+- Todas as tags da página (exceto o doctype):
+
+```js
+var tags = document.getElementsByTagName("*");
+tags[8].style.color = '#0f0';
+tags[8].innerHTML = 'NOVO TÍTULO';
+```
+
+---
+
+### Aula 026 - querySelectorAll
+
+- Abrange mais possibilidades que o getElementsByTagName, podendo substituí-lo.
+
+```js
+var elementos = document.querySelectorAll('.titulo');
+        for (var i = 0; i < elementos.length; i++) {
+            document.write(elementos[i].innerHTML + '<br>');
+		}
+```
+
+| Elementos                      | Exemplo        |
+| ------------------------------ | -------------- |
+| Classe                         | .titulo        |
+| Tag                            | p              |
+| Id                             | #nome          |
+| Classe de uma tag              | h2.titulo      |
+| Todos os elementos internos    | div > *        |
+| Elementos internos específicos | div > p        |
+|                                | div.quadro > p |
+| Mais de um parâmetro           | h1, h2, h3     |
+
+- E muitas outras. Ex.: a:visited - seleciona todos os links visitados
+
+---
+
+### Manipulando Forms com JS
+
+- Dei uma pausa no curso para estudar mais html e css
+- Voltarei dia 05/12/2020
