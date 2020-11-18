@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        label {display: block;}
+        input {display: block;}
+        input[type=submit], label {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form name='curso1' id='cursoUm' action='#' method='post'>
+        <label>Nome</label>
+        <input type='text' name='fNome' id='teste' value='Primeiro - 1'>
+        <label>Senha</label>
+        <input type='password' name='fSenha' value='123'>
+        <input type='submit' name='btEnviar' value='Enviar'>
+    </form>
+
+    <form name='curso2' id='cursoDois' action='#' method='post'>
+        <label>Nome</label>
+        <input type='text' name='fNome' id='teste' value='Segundo - 2'>
+        <label>Senha</label>
+        <input type='password' name='fSenha' value='123'>
+        <input type='submit' name='btEnviar' value='Enviar'>
+    </form>
+    <hr>
+
+    <script>
+        // mudar o conteúdo, formatar ou obter valor de elemento de formulário
+
+        var fm = document.forms.length; // retorna uma coleção (html collection)
+        document.write("Número de formulários na página: <mark>" + fm + "</mark>");
+
+        
+        var i = document.forms[0].id; // cursoUm
+        document.write('<hr>' + i);
+
+        document.write('<hr>' + document.forms.item(0).id); // cursoUm
+
+        document.write('<hr>' + document.forms.namedItem("curso2").id); // cursoDois
+
+        var f = document.forms[1].innerHTML; // retorna todo o formulário. Dá para usar em todos os comandos
+        document.write('<hr>' + f);
+
+        // dá para trabalhar com o índice ou id
+        // parei em 8:50
+
+        
+    </script>
+</body>
+</html>

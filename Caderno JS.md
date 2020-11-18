@@ -572,7 +572,7 @@ var elementos = document.querySelectorAll('.titulo');
 
 ---
 
-### Manipulando Forms com JS
+### Aula 027 - Manipulando Forms com JS
 
-- Dei uma pausa no curso para estudar mais html e css
-- Voltarei dia 05/12/2020
+- parei em 8:50
+
