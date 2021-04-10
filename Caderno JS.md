@@ -31,7 +31,8 @@ document.write(100 + 50); // 150
 - Em JS não precisa informar o tipo de dado
   - Inclusive é possível alternar automaticamente entre os tipos, sem conversões, pois é uma linguagem bem flexível
 - Declara-se usando a palavra `var`
-  - Na verdade, ela é opcional (igual em Python), mas é bom usá-la para demarcar a primeira ocorrência (função estética)
+  - Na verdade, ela é opcional (igual em Python), mas é bom usá-la para demarcar a primeira ocorrência
+  - Cuidado: também serve para declarar uma variável de mesmo nome com escopo local.
 - Observação sobre concatenação: se há string na expressão (de soma ou atribuição de variável) antes dos números, não haverá soma destes, a menos que estes estejam separados por parênteses.
 - Obs.: `var oi = null;`
 
@@ -576,3 +577,6 @@ var elementos = document.querySelectorAll('.titulo');
 
 - parei em 8:50
 
+---
+
+Observação - JS externo: `<script type='text/javascript' src='condicionaisLacosDate.js'></script>`
