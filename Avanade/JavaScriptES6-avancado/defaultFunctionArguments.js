@@ -17,7 +17,7 @@ console.log(multiply2(4, undefined)); // 4
 console.log(multiply2(undefined, 4)); // 4
 
 
-// Lazy evaluation: função só é invocada se o parâmetro estiver faltando
+// Lazy evaluation: usar funções para receber o valor de um argumento. Função só é invocada se o parâmetro estiver faltando
 
 function multiply3(a, b = randomNumber()) {
     return a * b;
@@ -29,3 +29,5 @@ function randomNumber() {
     console.log('Número aleatório gerado');
     return Math.random() * 10;
 }
+
+// Não podemos criar funções construtoras com arrow functions
